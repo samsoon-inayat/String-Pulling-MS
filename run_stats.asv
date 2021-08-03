@@ -1,0 +1,24 @@
+function run_stats
+
+file_name = 'StringPulling_AvgVelocity.xlsx';
+
+[num,txt,raw] = xlsread(file_name,2,'C14:H19');
+
+n = 0;
+
+[within,dvn,xlabels] = make_within_table({'Days'},[5]);
+xlabels = txt(2:6);
+between = make_between_table({num(:,2:6)},dvn);
+
+ra = repeatedMeasuresAnova(between,within);
+
+colormaps = load('../Common/Matlab/colorblind_colormap.mat');
+colormaps.colorblind = flipud(colormaps.colorblind);
+mData.colors = mat2cell(colormaps.colorblind,[ones(1,size(colormaps.colorblind,1))]);%{[0 0 0],[0.1 0.7 0.3],'r','b','m','c','g','y'}; % mData.colors = getColors(10,{'w','g'});
+
+hf = figure(6);clf;set(gcf,'Units','Inches');set(gcf,'Position',[5 7 1.5 1],'color','w');
+hold on;
+[xdata,mVar,semVar,combs,p,h,colors,hollowsep] = get_vals_for_line_graph(mData,ra,0);
+tcolors = mData.colors;
+ii = 1; plot(xdata,mVar(ii,:),'color',tcolors{ii},'linewidth',0.5); errorbar(xdata,mVar(ii,:),semVar(ii,:),'color',colors{ii},'linewidth',0.25,'linestyle','none','capsize',1);
+
