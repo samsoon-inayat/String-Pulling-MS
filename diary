@@ -1,0 +1,26 @@
+
+ans =
+
+  4×8 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+                         <strong>SumSq</strong>     <strong>DF</strong>     <strong>MeanSq</strong>       <strong>F</strong>         <strong>pValue</strong>       <strong>pValueGG</strong>      <strong>pValueHF</strong>      <strong>pValueLB</strong> 
+                        <strong>_______</strong>    <strong>__</strong>    <strong>________</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>
+
+    <strong>(Intercept)     </strong>     374.63     1      374.63    595.31    4.9473e-08    4.9473e-08    4.9473e-08    4.9473e-08
+    <strong>Error           </strong>     4.4051     7      0.6293                                                                  
+    <strong>(Intercept):Days</strong>    0.26627     5    0.053255    0.3756       0.86197       0.76414       0.86197       0.55935
+    <strong>Error(Days)     </strong>     4.9625    35     0.14179                                                                  
+
+
+ans =
+
+  4×8 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+                         <strong>SumSq</strong>     <strong>DF</strong>     <strong>MeanSq</strong>       <strong>F</strong>         <strong>pValue</strong>       <strong>pValueGG</strong>      <strong>pValueHF</strong>      <strong>pValueLB</strong> 
+                        <strong>_______</strong>    <strong>__</strong>    <strong>________</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>
+
+    <strong>(Intercept)     </strong>     387.08     1      387.08    1562.9    2.4458e-06    2.4458e-06    2.4458e-06    2.4458e-06
+    <strong>Error           </strong>    0.99066     4     0.24767                                                                  
+    <strong>(Intercept):Days</strong>     1.3315     9     0.14795    1.6698       0.13278       0.23825       0.16446       0.26588
+    <strong>Error(Days)     </strong>     3.1897    36    0.088602                                                                  
+
