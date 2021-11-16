@@ -11,9 +11,10 @@ file_name = 'AVG_VELOCITY ANOVA spreadsheet - Oct 05.xlsx';
 n = 0;
 %%
 while 1
+    rows = [1:7 9:11];
     cols = [2 3 4];
-    data = num(:,cols);
-    [within,dvn,xlabels] = make_within_table({'Days'},[2]);
+    data = num(rows,cols);
+    [within,dvn,xlabels] = make_within_table({'Days'},[3]);
     xlabels = txt(1,cols);
     between = make_between_table({data},dvn);
     ra = RMA(between,within);
